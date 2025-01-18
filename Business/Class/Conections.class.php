@@ -23,24 +23,9 @@ class Conections extends mysqli
             echo "Bueno se intento, error: " . $e->getMessage();
 
         }
-
-
-       
-    }
-
-    public function mySqlConnection (){
-        $host = (string)$this->hostname;
-        $user = (string)$this->username;
-        $pass = (string)$this->password;
-        $databaseName = (string)$this->database; 
-        print_r('antes de llamado');
-       
-        $mySql = new mysqli($host,$user,$pass,$databaseName);
-        print_r('despues de llamado');
-    }
-    
+    }   
 }
 
 $con = new Conections("localhost","root","","MEDIA");
-//$con->mySqlConnection();
+
 ?>
